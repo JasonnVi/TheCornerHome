@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Existing smooth scrolling to all links
+    // Smooth Scrolling for internal anchor links
     const smoothScrollLinks = document.querySelectorAll('a[href^="#"]');
     smoothScrollLinks.forEach(link => {
         link.addEventListener('click', function(e) {
@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Existing Gallery Image Lightbox
+    // Gallery Image Lightbox
     const galleryImages = document.querySelectorAll('.gallery-grid img');
     galleryImages.forEach(img => {
         img.addEventListener('click', function() {
@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function() {
             lightbox.style.left = '0';
             lightbox.style.width = '100%';
             lightbox.style.height = '100%';
-            lightbox.style.backgroundColor = 'rgba(0,0,0,0.8)';
+            lightbox.style.backgroundColor = 'rgba(0, 0, 0, 0.8)';
             lightbox.style.display = 'flex';
             lightbox.style.justifyContent = 'center';
             lightbox.style.alignItems = 'center';
@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // New: Carousel Auto-play and Pause on Hover
+    // Carousel Auto-play with Pause on Hover
     const homeCarousel = document.getElementById('homeCarousel');
     if (homeCarousel) {
         const carousel = new bootstrap.Carousel(homeCarousel, {
@@ -56,9 +56,21 @@ document.addEventListener('DOMContentLoaded', function() {
             carousel.pause();
         });
 
-        // Resume carousel when mouse leaves
+        // Resume carousel on mouse leave
         homeCarousel.addEventListener('mouseleave', () => {
             carousel.cycle();
+        });
+    }
+
+    // New: Focus styles for accessibility (e.g., for buttons)
+    const bookNowButton = document.querySelector('.btn-book-now');
+    if (bookNowButton) {
+        bookNowButton.addEventListener('focus', function() {
+            this.style.outline = '3px solid #007bff';
+        });
+
+        bookNowButton.addEventListener('blur', function() {
+            this.style.outline = 'none';
         });
     }
 });
