@@ -1,0 +1,127 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Updated Navbar Styles */
+.navbar {
+    background-color: white !important;
+    border-bottom: 1px solid #000;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.navbar-brand {
+    color: #000 !important;
+    font-weight: bold;
+}
+
+.navbar-toggler {
+    border-color: #000;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='black' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+.nav-link {
+    color: #000 !important;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #666 !important;
+}
+
+.nav-link.active {
+    font-weight: bold;
+}
+
+/* Book Now Button */
+.btn-book-now {
+    background-color: #007bff;
+    color: white;
+    border: 2px solid #007bff;
+    border-radius: 5px;
+    padding: 8px 16px;
+    margin-left: 15px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.btn-book-now:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+    color: white;
+}
+
+.navbar-brand .logo {
+    height: 50px;
+    width: auto;
+    max-width: 150px;
+    object-fit: contain;
+}
+
+.gallery-grid img {
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.gallery-grid img:hover {
+    transform: scale(1.05);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .navbar-brand .logo {
+        height: 40px;
+        max-width: 120px;
+    }
+
+    .btn-book-now {
+        margin-left: 0;
+        margin-top: 10px;
+        display: block;
+        text-align: center;
+    }
+}
+
+.carousel {
+    max-height: 600px;
+    overflow: hidden;
+}
+
+.carousel-item img {
+    object-fit: cover;
+    max-height: 600px;
+    width: 100%;
+}
+
+.carousel-caption {
+    background-color: rgba(0,0,0,0.5);
+    border-radius: 10px;
+    padding: 15px;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: rgba(0,0,0,0.5);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .carousel {
+        max-height: 300px;
+    }
+
+    .carousel-item img {
+        max-height: 300px;
+    }
+
+    .carousel-caption {
+        display: none; /* Hide captions on small screens to avoid overcrowding */
+    }
+}
