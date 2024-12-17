@@ -1,19 +1,25 @@
+/* Global Styles */
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Roboto', sans-serif; /* Updated font */
     background-color: #f4f4f4;
     color: #333;
 }
 
-/* Updated Navbar Styles */
+/* Navbar Styles */
 .navbar {
     background-color: white !important;
     border-bottom: 1px solid #000;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .navbar-brand {
     color: #000 !important;
     font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.navbar-brand:hover {
+    color: #555 !important; /* Added hover effect for brand */
 }
 
 .navbar-toggler {
@@ -30,7 +36,7 @@ body {
 }
 
 .nav-link:hover {
-    color: #666 !important;
+    color: #333 !important; /* Improved hover color contrast */
 }
 
 .nav-link.active {
@@ -43,7 +49,8 @@ body {
     color: white;
     border: 2px solid #007bff;
     border-radius: 5px;
-    padding: 8px 16px;
+    padding: 0.5rem 1rem; /* Scalable units */
+    font-size: 1rem;
     margin-left: 15px;
     text-decoration: none;
     transition: all 0.3s ease;
@@ -55,6 +62,11 @@ body {
     color: white;
 }
 
+.btn-book-now:focus {
+    outline: 3px solid #007bff; /* Added focus styles */
+    outline-offset: 2px;
+}
+
 .navbar-brand .logo {
     height: 50px;
     width: auto;
@@ -62,7 +74,11 @@ body {
     object-fit: contain;
 }
 
+/* Gallery Grid */
 .gallery-grid img {
+    width: 100%; /* Ensures responsiveness */
+    height: auto;
+    display: block;
     transition: transform 0.3s ease;
     cursor: pointer;
 }
@@ -71,21 +87,7 @@ body {
     transform: scale(1.05);
 }
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    .navbar-brand .logo {
-        height: 40px;
-        max-width: 120px;
-    }
-
-    .btn-book-now {
-        margin-left: 0;
-        margin-top: 10px;
-        display: block;
-        text-align: center;
-    }
-}
-
+/* Carousel Styles */
 .carousel {
     max-height: 600px;
     overflow: hidden;
@@ -98,21 +100,33 @@ body {
 }
 
 .carousel-caption {
-    background-color: rgba(0,0,0,0.5);
+    background-color: rgba(0, 0, 0, 0.5);
     border-radius: 10px;
     padding: 15px;
 }
 
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
-    background-color: rgba(0,0,0,0.5);
+    background-color: rgba(0, 0, 0, 0.5);
     border-radius: 50%;
     width: 50px;
     height: 50px;
 }
 
-/* Responsive adjustments */
+/* Responsive Adjustments */
 @media (max-width: 768px) {
+    .navbar-brand .logo {
+        height: 40px;
+        max-width: 120px;
+    }
+
+    .btn-book-now {
+        margin-left: 0;
+        margin-top: 10px;
+        display: block;
+        text-align: center;
+    }
+
     .carousel {
         max-height: 300px;
     }
